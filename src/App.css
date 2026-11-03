@@ -1,0 +1,285 @@
+.pagina {
+  width: min(100% - 2.5rem, 1040px);
+  min-height: calc(100vh - 190px);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3rem) 0;
+}
+
+.pagina-cabecalho {
+  margin-bottom: 1.5rem;
+}
+
+.pagina-cabecalho h1 {
+  color: var(--palha);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+}
+
+.pagina-cabecalho p {
+  margin: 0.35rem 0 0;
+  font-size: 1.05rem;
+}
+
+.grade-roca {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.participante-card {
+  position: relative;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 4px solid var(--papel);
+  border-radius: 10px;
+  background: var(--papel);
+  color: var(--tinta);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.participante-card.card-roca {
+  border-color: var(--celeiro);
+  outline: 3px solid var(--papel);
+  outline-offset: -7px;
+  padding: 0.9rem;
+}
+
+.participante-foto {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.participante-card h2 {
+  margin: 0.4rem 0 0.6rem;
+  text-align: center;
+  font-size: clamp(1.05rem, 1.8vw, 1.45rem);
+}
+
+.selo-roca {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  right: -0.5rem;
+  padding: 0.35rem 0.75rem;
+  transform: rotate(5deg);
+  background: var(--celeiro);
+  color: white;
+  font-family: var(--fonte-titulo);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.participante-votar {
+  width: 100%;
+  min-height: 48px;
+}
+
+.secao-fora-roca {
+  margin-top: 2.5rem;
+}
+
+.secao-fora-roca > h2 {
+  color: var(--palha);
+  font-size: 1.55rem;
+}
+
+.secao-fora-roca > p {
+  margin: 0.3rem 0 1rem;
+  color: #e3d1ac;
+}
+
+.grade-fora-roca {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0.8rem;
+}
+
+.card-fora-da-roca {
+  padding: 0.5rem;
+  border: 0;
+  background: #e7dcc4;
+}
+
+.card-fora-da-roca h2 {
+  margin: 0.3rem 0 0;
+  font-family: var(--fonte-texto);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.card-fora-da-roca .participante-foto {
+  aspect-ratio: 16 / 9;
+}
+
+.aviso {
+  margin: 0 0 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  background: var(--papel);
+  color: var(--tinta);
+  font-weight: 700;
+}
+
+.voto-sucesso {
+  border-left: 5px solid var(--pasto);
+}
+
+.voto-erro {
+  border-left: 5px solid var(--celeiro);
+}
+
+.total-votos {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.total-votos strong {
+  color: var(--palha);
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.placar {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.placar-item {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  border: 4px solid transparent;
+  border-radius: 9px;
+  background: var(--papel);
+  color: var(--tinta);
+}
+
+.placar-lider {
+  border-color: var(--celeiro);
+}
+
+.placar-item > img {
+  width: 100%;
+  aspect-ratio: 1.65;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.placar-nome {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.55rem;
+}
+
+.placar-nome h2 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.selo-lider {
+  padding: 0.25rem 0.55rem;
+  border-radius: 4px;
+  background: var(--celeiro);
+  color: white;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.barra {
+  height: 20px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #d9c9a8;
+}
+
+.barra-preenchida {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--madeira);
+  transition: width 0.3s ease;
+}
+
+.placar-lider .barra-preenchida {
+  background: var(--celeiro);
+}
+
+.placar-conteudo > p {
+  margin: 0.35rem 0 0;
+  font-weight: 800;
+}
+
+.resultado-vazio {
+  padding: 2rem;
+  border-radius: 10px;
+  background: var(--papel);
+  color: var(--tinta);
+  text-align: center;
+}
+
+.resultado-vazio h2 {
+  margin-bottom: 0.5rem;
+}
+
+.resultado-vazio p {
+  margin: 0;
+}
+
+.botao-zerar {
+  margin-top: 1.5rem;
+  border: 2px solid var(--papel);
+  background: transparent;
+  color: var(--papel);
+}
+
+@media (max-width: 720px) {
+  .pagina {
+    width: min(100% - 2rem, 560px);
+  }
+
+  .participante-card.card-roca {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 0 0.8rem;
+  }
+
+  .participante-card.card-roca .participante-foto {
+    grid-row: span 2;
+  }
+
+  .participante-card.card-roca h2 {
+    align-self: end;
+    margin-bottom: 0.4rem;
+  }
+
+  .participante-card.card-roca .participante-votar {
+    align-self: start;
+  }
+
+  .placar-item {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .placar-item {
+    grid-template-columns: 1fr;
+  }
+
+  .placar-item > img {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* dúvida boba:
+  Será que em empresas de marketing, ou de desenvolvimento que fazem muitas landing pages / site oficiais pra empresas, eles já não possuem um "molde" pro css?
+  Algo como um arquivo css que é utilizado pra tudo! Aí dele... que saem as produções da empresa, acho que isso economizaria bastante tempo*/
+}
